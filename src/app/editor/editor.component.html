@@ -1,0 +1,7 @@
+
+<ejs-richtexteditor id='mdPreview' #mdPreview [toolbarSettings]='tools' [editorMode]='mode' (created)='onCreate()'
+            (actionComplete)="actionComplete($event)">
+            <ng-template #valueTemplate>
+               Type ..
+            </ng-template>
+</ejs-richtexteditor>
