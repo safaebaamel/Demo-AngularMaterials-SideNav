@@ -1,0 +1,22 @@
+<form [formGroup]="labelsForm" (ngSubmit)="onSubmit()" class="example-form">
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Title</mat-label>
+      <input  formControlName="name" matInput #message maxlength="120" type="text">
+      <mat-hint align="end">{{message.value.length}} / 120</mat-hint>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <input  formControlName="description" matInput #message maxlength="120" type="text">
+        <mat-hint align="end">{{message.value.length}} / 120</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Background Color</mat-label>
+        <input  formControlName="color" matInput #message maxlength="120" placeholder="#0000ff" type="text">
+        <mat-hint align="end">{{message.value.length}} / 120</mat-hint>
+      </mat-form-field>
+    <mat-divider></mat-divider>
+    <button mat-raised-button color="primary" type="submit">
+        Create Label
+    </button>
+  </form>

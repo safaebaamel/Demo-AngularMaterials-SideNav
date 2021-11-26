@@ -1,0 +1,16 @@
+<mat-card>The Issue Tracker is the place to add things that need to be improved or solved in a project</mat-card>
+<mat-card>
+    <mat-divider></mat-divider>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let issue of issues">
+        <h4 mat-line>{{issue.title}}</h4>
+        <p mat-line>
+          <span>{{issue.description}}</span>
+        </p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<button mat-flat-button color="primary" routerLink="/issues/new">New Issue</button>

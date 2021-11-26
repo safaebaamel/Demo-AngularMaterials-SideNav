@@ -2,6 +2,11 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
+  devServer: {
+    disableHostCheck: true
+    port: 4200
+    public: '0.0.0.0:4000' 
+  }
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
